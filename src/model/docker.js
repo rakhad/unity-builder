@@ -41,6 +41,7 @@ class Docker {
     const command = `docker run \
         --workdir /github/workspace \
         --rm \
+        --env UNITY_SKIP_ACTIVATION \
         --env UNITY_LICENSE \
         --env UNITY_LICENSE_FILE \
         --env UNITY_EMAIL \
