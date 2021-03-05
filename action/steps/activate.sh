@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
-if [[ -n "$UNITY_LICENSE" ]] || [[ -n "$UNITY_LICENSE_FILE" ]]; then
+if [[ -n "$UNITY_SKIP_ACTIVATION" ]] then
+  UNITY_EXIT_CODE=0
+elif [[ -n "$UNITY_LICENSE" ]] || [[ -n "$UNITY_LICENSE_FILE" ]]; then
   #
   # PERSONAL LICENSE MODE
   #
